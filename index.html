@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RetroChat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    body {
+      font-family: 'Press Start 2P', monospace;
+      background: #f0f8ff;
+      color: #003366;
+    }
+
+    a {
+      color: #004080;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #ff4500;
+    }
+
+    .retro-box {
+      box-shadow:
+        2px 2px 0 #ffffff,
+        4px 4px 0 #999999;
+    }
+
+    .blinking {
+      animation: blink 1s step-start 0s infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .iconify {
+      image-rendering: pixelated;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <nav class="bg-blue-300 retro-box p-4 sticky top-0 z-20">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="text-xl font-bold flex items-center space-x-2">
+        <span class="iconify" data-icon="mdi:chat" data-inline="false" style="font-size: 2rem;"></span>
+        <span>RetroChat</span>
+      </div>
+      <ul class="hidden md:flex space-x-6 text-sm uppercase tracking-wide">
+        <li><a href="#welcome">Welcome</a></li>
+        <li><a href="#users">Users</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <button class="md:hidden text-2xl font-bold">☰</button>
+    </div>
+  </nav>
+  <main class="container mx-auto flex-grow px-4 py-6 grid grid-cols-1 md:grid-cols-4 gap-6">
+    <section id="welcome" class="md:col-span-3 bg-white p-6 retro-box rounded-md relative">
+      <h1 class="text-3xl mb-4 border-b-4 border-blue-600 pb-2 flex items-center space-x-3">
+        <span class="iconify" data-icon="mdi:message-text" data-inline="false" style="font-size: 2.5rem;"></span>
+        <span>Welcome 2 RetroChat <span class="blinking">|</span></span>
+      </h1>
+      <p class="mb-4 text-lg leading-relaxed">
+        Welcome 2 a classic chatroom experience inspired by the 1990s web era simple fast and friendly join others 2 chat about music games school or just 2 hang out
+      </p>
+      <p class="mb-6">
+        No complicated signups or flashy distractions just pure chatting fun like it used 2 b
+      </p>
+      <div class="bg-blue-100 p-4 rounded retro-box max-h-64 overflow-auto font-mono text-sm">
+        <h2 class="font-bold mb-2 flex items-center space-x-2">
+          <span class="iconify" data-icon="mdi:comment-text" data-inline="false" style="font-size: 1.2rem;"></span>
+          <span>Sample Chat Messages</span>
+        </h2>
+        <div class="space-y-1">
+          <div><strong>Sam:</strong> hey did u c the new sci-fi movie lol it was awesome</div>
+          <div><strong>Jordan:</strong> omg yesss special effects were fire brb gotta grab a snack</div>
+          <div><strong>Alex:</strong> lol gtg 4 now cya l8r</div>
+          <div><strong>Taylor:</strong> anyone up 4 a game tonight ttyl</div>
+        </div>
+      </div>
+      <form class="mt-4 flex" action="#" method="POST" onsubmit="alert('Chat feature coming soon')">
+        <input
+          type="text"
+          placeholder="type ur msg here"
+          class="flex-grow p-2 border-2 border-blue-400 rounded-l-md focus:outline-none"
+          aria-label="Chat message input"
+          required
+        />
+        <button
+          type="submit"
+          class="bg-blue-400 px-4 rounded-r-md font-bold hover:bg-blue-600 transition-colors"
+        >
+          send
+        </button>
+      </form>
+      <span
+        class="iconify absolute top-4 right-4 cursor-pointer"
+        id="secret-trigger"
+        data-icon="mdi:emoticon-happy-outline"
+        data-inline="false"
+        style="font-size: 1.5rem"
+        title="hover me for a surprise"
+      ></span>
+    </section>
+    <aside id="users" class="bg-white p-6 retro-box rounded-md md:col-span-1">
+      <h2 class="text-xl mb-3 border-b-2 border-blue-400 pb-1 font-bold uppercase flex items-center space-x-2">
+        <span class="iconify" data-icon="mdi:account-multiple" data-inline="false" style="font-size: 1.2rem"></span>
+        <span>Active Users</span>
+      </h2>
+      <ul class="space-y-2 font-mono text-sm">
+        <li>💬 Sam</li>
+        <li>💬 Jordan</li>
+        <li>💬 Alex</li>
+        <li>💬 Taylor</li>
+        <li>💬 Morgan</li>
+      </ul>
+    </aside>
+    <section id="faq" class="md:col-span-4 bg-white p-6 retro-box rounded-md mt-6 md:mt-0">
+      <h2 class="text-xl mb-4 border-b-2 border-blue-400 pb-1 font-bold uppercase flex items-center space-x-2">
+        <span class="iconify" data-icon="mdi:help-circle-outline" data-inline="false" style="font-size: 1.2rem"></span>
+        <span>Frequently Asked Questions</span>
+      </h2>
+      <details class="mb-3 border border-blue-300 rounded px-3 py-2 cursor-pointer">
+        <summary class="font-semibold">how do i join the chat</summary>
+        <p class="mt-2 ml-4 text-sm">
+          just type your message like youre sliding into a convo no forms no hassle no stress
+        </p>
+      </details>
+      <details class="mb-3 border border-blue-300 rounded px-3 py-2 cursor-pointer">
+        <summary class="font-semibold">can i use emojis</summary>
+        <p class="mt-2 ml-4 text-sm">
+          sure go ahead just think of them like seasoning a bland meal a little extra flavor never hurts
+        </p>
+      </details>
+      <details class="mb-3 border border-blue-300 rounded px-3 py-2 cursor-pointer">
+        <summary class="font-semibold">is this chat moderated</summary>
+        <p class="mt-2 ml-4 text-sm">
+          yeah think of mods like friendly security guards making sure no ones ruining the party
+        </p>
+      </details>
+      <details class="mb-3 border border-blue-300 rounded px-3 py-2 cursor-pointer">
+        <summary class="font-semibold">what if i send a typo</summary>
+        <p class="mt-2 ml-4 text-sm">
+          typos happen its like dropping your phone but still picking it up and going on no biggie
+        </p>
+      </details>
+      <details class="mb-3 border border-blue-300 rounded px-3 py-2 cursor-pointer">
+        <summary class="font-semibold">can i talk about random stuff</summary>
+        <p class="mt-2 ml-4 text-sm">
+          absolutely this place is like a chill cafe for your brain no topic off limits just keep it cool
+        </p>
+      </details>
+    </section>
+  </main>
+  <footer class="bg-blue-300 retro-box text-center py-4 mt-6 text-xs font-bold uppercase">
+    &copy; 1997 RetroChat made with love
+  </footer>
+  <script>
+    const secretTrigger = document.getElementById('secret-trigger')
+
+    secretTrigger.addEventListener('mouseenter', () => {
+      secretTrigger.setAttribute('data-icon', 'mdi:emoticon-excited-outline')
+    })
+
+    secretTrigger.addEventListener('mouseleave', () => {
+      secretTrigger.setAttribute('data-icon', 'mdi:emoticon-happy-outline')
+    })
+  </script>
+</body>
+</html>
