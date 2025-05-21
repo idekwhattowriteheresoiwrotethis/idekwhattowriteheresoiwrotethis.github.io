@@ -1,7 +1,5 @@
 # RetroChat
 
-![RetroChat Logo](https://cdn.iconify.design/mdi:chat.svg)
-
 **RetroChat** is a 90s-inspired classic chatroom web app — simple, fast, and friendly. No fancy signups or distractions, just pure chatting fun, the way it used to be.
 
 ---
